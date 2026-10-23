@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This title will be overridden by the script below immediately, but keeps it safe just in case -->
+    <title>Google Docs</title>
+    
+    <!-- Tab Cloaking Script: Changes the tab title and icon to Google Docs -->
+    <script>
+        document.title = "Google Docs - CS Project Notes";
+        
+        (function() {
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = 'https://gstatic.com';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        })();
+    </script>
+
+    <style>
+        /* Clean, professional styling that looks like an educational site */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 4px solid #18bc9c;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .intro-box {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border-left: 5px solid #18bc9c;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 3px solid #34495e;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        .card p {
+            font-size: 13px;
+            color: #7f8c8d;
+            height: 40px;
+            overflow: hidden;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #18bc9c;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #16a085;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 12px;
+            color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Static Web Development Lab</h1>
+        <p>Independent Study Repository &bull; Course Module 4</p>
+    </header>
+
+    <div class="container">
+        <div class="intro-box">
+            <h2>Interactive Embed Testing</h2>
+            <p>This repository hosts various compiled sandboxes testing browser-based interactive scripts, user interface loops, and logic state engines.</p>
+        </div>
+
+        <div class="grid">
+            <!-- Project 1 Card -->
+            <div class="card">
+                <h3>Module Alpha</h3>
+                <p>Testing iframe scaling, screen aspect ratios, and input rendering speeds.</p>
+                <!-- Change project1.html to whatever you name your game page file -->
+                <a href="project1.html" class="btn">Launch Application</a>
+            </div>
+
+            <!-- Project 2 Card -->
+            <div class="card">
+                <h3>Module Beta</h3>
+                <p>Evaluating collision mechanics and continuous animation rendering strings.</p>
+                <!-- Change project2.html to whatever you name your game page file -->
+                <a href="project2.html" class="btn">Launch Application</a>
+            </div>
+
+            <!-- Project 3 Card -->
+            <div class="card">
+                <h3>Module Gamma</h3>
+                <p>Analyzing localized frame-rate drops and vector coordinate math.</p>
+                <!-- Change project3.html to whatever you name your game page file -->
+                <a href="project3.html" class="btn">Launch Application</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Student Engineering Portfolio. All files hosted via GitHub Page protocols.</p>
+    </footer>
+
+</body>
+</html>
