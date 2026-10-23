@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Docs</title>
     
-    <!-- Tab Cloaker: Keeps your Retro Bowl session hidden as Google Docs -->
+    <!-- Tab Cloaker -->
     <script>
         document.title = "Google Docs - CS Project Notes";
         (function() {
@@ -18,15 +18,15 @@
     </script>
 
     <style>
-        body {
+        body, html {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
             background-color: #000;
-            font-family: Arial, sans-serif;
+            overflow: hidden;
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
         }
         nav {
             background-color: #2c3e50;
@@ -44,37 +44,48 @@
             border-radius: 4px;
             font-weight: bold;
             font-size: 14px;
+            font-family: Arial, sans-serif;
         }
         .back-btn:hover {
             background-color: #16a085;
         }
-        .game-wrapper {
+        .game-display {
             flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
             height: 100%;
-            position: relative;
         }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+        canvas {
+            image-rendering: pixelated;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 100vw;
+            max-height: calc(100vh - 45px);
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
 
-    <!-- Small navigation bar to get back to your main site menu -->
     <nav>
         <a href="index.html" class="back-btn">&larr; Return to Lab Overview</a>
     </nav>
 
-    <div class="game-wrapper">
-        <!-- Brand new unblocked mirror URL that loads Retro Bowl directly -->
-        <iframe src="https://github.io" allowfullscreen="true"></iframe>
+    <div class="game-display">
+        <!-- Direct native canvas architecture: No iFrames to trigger school filters -->
+        <canvas id="canvas" width="960" height="540"></canvas>
     </div>
 
+    <!-- Injecting the open-source web deployment engines directly -->
+    <script type="text/javascript" src="https://jsdelivr.net"></script>
+    <script>
+        window.onload = function() {
+            if (typeof GameMaker_Init === "function") {
+                GameMaker_Init();
+            }
+        };
+    </script>
 </body>
 </html>
