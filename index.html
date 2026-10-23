@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- This title will be overridden by the script below immediately, but keeps it safe just in case -->
     <title>Google Docs</title>
     
-    <!-- Tab Cloaking Script: Changes the tab title and icon to Google Docs -->
+    <!-- Tab Cloaker: Changes the tab title and icon to Google Docs -->
     <script>
         document.title = "Google Docs - CS Project Notes";
         
@@ -15,12 +14,11 @@
             link.type = 'image/x-icon';
             link.rel = 'shortcut icon';
             link.href = 'https://gstatic.com';
-            document.getElementsByTagName('head')[0].appendChild(link);
+            document.getElementsByTagName('head').appendChild(link);
         })();
     </script>
 
     <style>
-        /* Clean, professional styling that looks like an educational site */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f6f9;
@@ -123,34 +121,18 @@
         </div>
 
         <div class="grid">
-            <!-- Project 1 Card -->
+            <!-- Project 1 Card (Retro Bowl) -->
             <div class="card">
                 <h3>Module Alpha</h3>
                 <p>Testing iframe scaling, screen aspect ratios, and input rendering speeds.</p>
-                <!-- Change project1.html to whatever you name your game page file -->
+                <!-- This links directly to project1.html -->
                 <a href="project1.html" class="btn">Launch Application</a>
-            </div>
-
-            <!-- Project 2 Card -->
-            <div class="card">
-                <h3>Module Beta</h3>
-                <p>Evaluating collision mechanics and continuous animation rendering strings.</p>
-                <!-- Change project2.html to whatever you name your game page file -->
-                <a href="project2.html" class="btn">Launch Application</a>
-            </div>
-
-            <!-- Project 3 Card -->
-            <div class="card">
-                <h3>Module Gamma</h3>
-                <p>Analyzing localized frame-rate drops and vector coordinate math.</p>
-                <!-- Change project3.html to whatever you name your game page file -->
-                <a href="project3.html" class="btn">Launch Application</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 Student Engineering Portfolio. All files hosted via GitHub Page protocols.</p>
+        <p>&copy; 2026 Student Engineering Portfolio.</p>
     </footer>
 
 </body>
